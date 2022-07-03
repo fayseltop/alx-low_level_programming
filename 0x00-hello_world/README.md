@@ -1,1 +1,1 @@
-readme used to descripe your projectn int main(void) the funcion working properley  return (0) 
+readme used to descripe your project 
