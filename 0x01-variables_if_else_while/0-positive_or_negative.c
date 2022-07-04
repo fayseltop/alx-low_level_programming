@@ -1,22 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
 * main - prints the size of various types
 * Return: 0 if exited properly, non-zero otherwise
 */
 int main(void)
 {
+int ch;
 int n;
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-if (n > 0)
-printf("%d is positive\n", n);
-if (n == 0)
-printf("%d is zero\n", n);
-if (n < 0)
+for (ch = 48; ch <= 57; ch++)
 {
-printf("%d is negative\n", n);
+for (n = 49; n <= 57; n++)
+{
+if (n > ch)
+{
+putchar(ch);
+putchar(n);
+if (ch != 56 || n != 57)
+{
+putchar(44);
+putchar(32);
 }
-return (0);
+}
+}
+}
 }
