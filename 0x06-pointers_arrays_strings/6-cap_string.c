@@ -1,27 +1,33 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
-* leet -> a leet function
-* @x: param x
-* Return: a string
-*/
-char *leet(char *x)
+ * cap_string - Function that reverses the content of an array of integers.
+ *
+ * @s: s is the array
+ *
+ * Return: Always 0.
+ */
+char *cap_string(char *s)
 {
-	int a = 0, b, l = 5;
-	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
-	char trw[5] = {'4', '3', '0', '7', '1'};
+	int i = 0;
 
-	while (x[a])
+	while (s[i] != '\0')
 	{
-		b = 0;
-
-		while (b < l)
+		if (s[0] <= 122 && s[0] >= 97)
 		{
-			if (x[a] == tr[b] || x[a] - 32 == tr[b])
-				x[a] = trw[b];
-			b++;
+			s[0] = s[0] - 32;
 		}
-		a++;
+		if (s[i] == 32 || s[i] == 46 || s[i] == '\t' ||
+			s[i] == '\n' || s[i] == 44 || s[i] == 59 ||
+				s[i] == '!' || s[i] == '?' || s[i] == '(' ||
+				s[i] == ')' || s[i] == '{' || s[i] == '}')
+		{
+			if (s[i + 1] <= 122 && s[i + 1] >= 97)
+			{
+				s[i + 1] = s[i + 1] - 32;
+			}
+		}
+	i++;
 	}
-	return (x);
+	return (s);
 }
