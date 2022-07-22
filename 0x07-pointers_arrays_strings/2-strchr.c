@@ -1,25 +1,20 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
-* _strchr -> string character
-* @s: string given
-* @c: another char
-* Return: a string
-*/
+ * _strchr - prints buffer in hexa
+ * @s: buffer
+ * @c: buffer2
+ *
+ * Return: Nothing.
+ */
 char *_strchr(char *s, char c)
 {
-		int a;
-
-		while (1)
+	while (*s != c)
+	{
+		if (!*s++)
 		{
-			a = *s++;
-			if (a == c)
-			{
-				return (s - 1);
-			}
-			if (a == 0)
-			{
-				return (NULL);
-			}
+			return (0);
 		}
+	}
+		return (s);
 }
