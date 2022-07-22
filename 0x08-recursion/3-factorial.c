@@ -1,14 +1,19 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
-* factorial -> function factorial
-* @n: number
-* Return: an integer
-*/
+ * factorial - check the code for Holberton School students.
+ * @n: number of factorial
+ * Return: Always 0.
+ */
 int factorial(int n)
 {
-	if (n < 0)
-		return (-1);
-	if (n <= 1)
+	if (n == 0)
+	{
 		return (1);
-	re
+	}
+	else if (n < 0)
+	{
+		return (-1);
+	}
+	return (n * factorial(n - 1));
+}
